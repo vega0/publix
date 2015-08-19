@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>gear.json</file>
+        <file>dirs.json</file>
+    </qresource>
+    <qresource prefix="/web_path">
+        <file>libraries.txt</file>
+        <file>resources.txt</file>
+        <file>sources.txt</file>
+    </qresource>
+</RCC>

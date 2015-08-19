@@ -1,0 +1,13 @@
+{
+    "versions" : {
+        "initial" : "verbucket",
+        "structure" : "{version}",
+        "hash" : false,
+        "dirsauto" : true
+    },
+
+    "assets" : {
+        "initial" : "assets01",
+        "structure" : "{version}"
+    }
+}
