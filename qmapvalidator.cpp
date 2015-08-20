@@ -7,14 +7,13 @@ QMapValidator::QMapValidator()
 {
 }
 
-QMapValidator::QMapValidator(QStringList initial, QVariantMap *valider)
+QMapValidator::QMapValidator(const QStringList& initial, const QVariantMap& valider)
 {
     params = initial;
 
     params.append("test123");
 
     this->valider = valider;
-
 }
 
 bool QMapValidator::isValid()
@@ -30,7 +29,7 @@ bool QMapValidator::isValid()
     foreach( QString param, params )
     {
         __debug_p( "Checking" << param );
-        if( ! valider->contains( param ) )
+        if( ! valider.contains( param ) )
             return false;
     }
 

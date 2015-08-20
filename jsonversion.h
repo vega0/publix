@@ -9,9 +9,6 @@
 
 class JsonVersion : public QMapValidator
 {
-private:
-    QVariantMap jver;
-
 public:
     QString version_id;
     QString version_type;
@@ -21,7 +18,6 @@ public:
 
     QList< JsonLibrary > jlibs;
 
-    JsonVersion();
     JsonVersion( QVariantMap jsonMap );
 
     QString buildClassPath();
