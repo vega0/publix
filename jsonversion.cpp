@@ -3,25 +3,18 @@
 
 #define __CLASS__ "]JsonVersion["
 
-JsonVersion::JsonVersion() :
-    QMapValidator( QStringList( { "id", "libraries", "type", "minecraftArguments"} ), &this->jver )
+JsonVersion::JsonVersion( QVariantMap jsonMap ) :
+    QMapValidator( QStringList( { "id", "libraries", "type", "minecraftArguments"} ), jsonMap )
 {
     addValid( QObject::tr( "assets" ) );
     addValid( QObject::tr( "mainClass" ) );
     addValid( QObject::tr( "bullshit" ) );
-}
-
-JsonVersion::JsonVersion( QVariantMap jsonMap )
-{
-    JsonVersion();
 
     if( jsonMap.isEmpty() )
     {
         __debug_p( "Initial map is empty" );
         return;
     }
-
-    jver = jsonMap;
 
     version_id          = jsonMap.value( "id" ).toString();
     version_type        = jsonMap.value( "type" ).toString();

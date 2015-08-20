@@ -9,11 +9,11 @@ class QMapValidator
 {
 private:
     QStringList params;
-    QVariantMap *valider;
+    QVariantMap valider;
 
 public:
     QMapValidator();
-    QMapValidator( QStringList initial, QVariantMap *valider );
+    QMapValidator( const QStringList& initial, const QVariantMap& valider );
     bool isValid();
 
 protected:
